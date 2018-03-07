@@ -44,3 +44,4 @@ while True:
         print (next(f), end=" ")
     except StopIteration:
         sys.exit()
+
