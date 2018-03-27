@@ -24,3 +24,8 @@ print([vec1[i]*vec2[i] for i in range(len(vec1))])
 
 
 print([str(round(355/113, i)) for i in range(1, 6)])
+
+
+#集合
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(basket)
