@@ -5,21 +5,28 @@ import urllib3
 import json
 
 class RequestUtils:
+    #私有变量
     __privateVar = ""
+
+    #公有变量
     method = ""
     url = ""
+
+    #构造函数
     def __init__(self,method,url):
         print("RequestUtils的构造函数")
         self.method = method
         self.url = url
 
-    
+    #公有方法，（访问私有变量的方式）
     def visitPrivateVar(self):
         return self.__privateVar
 
+    #私有方法，只能内部访问
     def __disableWarning__(self):
         requests.packages.urllib3.disable_warnings()
 
+    #公有方法
     def getRequest(self):
         self.__disableWarning__()
         # 一个PoolManager实例来生成请求, 由该实例对象处理与线程池的连接以及线程安全的所有细节
@@ -31,6 +38,7 @@ class RequestUtils:
         # 获得html源码,utf-8解码
         #print(r.data.decode())
     
+    #公有方法
     def postRequest(self):
         self.__disableWarning__()
         #你还可以通过request()方法向请求(request)中添加一些其他信息，如：
@@ -42,6 +50,7 @@ class RequestUtils:
         print(r.data.decode())
         return r.data.decode
 
+    #公有方法
     def jsonRequest(self):
         data={'attribute':'value'}
         encode_data= json.dumps(data).encode()
