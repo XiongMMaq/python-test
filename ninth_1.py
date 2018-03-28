@@ -26,6 +26,16 @@ print([vec1[i]*vec2[i] for i in range(len(vec1))])
 print([str(round(355/113, i)) for i in range(1, 6)])
 
 
-#集合
+#集合set
 basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 print(basket)
+
+#字典dict
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+for k, v in knights.items():
+    print(k, v)
+
+#元组tuple
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+for f in sorted(set(basket)):
+    print(f)
