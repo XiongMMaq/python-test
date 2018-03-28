@@ -17,3 +17,12 @@ model_support.print_func("Tom")
 
 model_support.fib(5)
 print(model_support.fib2(5))
+
+#From...import...
+#from model_support import fib #该模式只会引入fib函数
+
+
+#__name__属性的作用
+import using_name
+print(dir(model_support))
+
